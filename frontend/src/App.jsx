@@ -9,6 +9,7 @@ import MyAppiontments from './pages/MyAppiontments'
 import MyProfile from './pages/MyProfile'
 import Appointments from './pages/Appointment'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 
 
@@ -33,6 +34,9 @@ const App = () => {
 
       
     </Routes>
+    <Footer />
+
+    
       
     </div>
   )
