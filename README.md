@@ -1,2 +1,2 @@
 # DOCKITO
-## [DOCKITO](https://example.com)s
+## [DOCKITO](https://example.com)
