@@ -7,7 +7,7 @@ const connectDB = async () => {
     await mongoose.connect(`${process.env.MONGODB_URI}/dockito`)
 }
 
-export default connectDB
+export default connectDB;
 
 /*import mongoose from 'mongoose';
 
