@@ -1,4 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
+
+const Header = () => {
+  return (
+    <div>
+=======
 import { assets } from '../assets/assets'
 
 const Header = () => {
@@ -23,6 +29,7 @@ const Header = () => {
             <img className='w-full md:absolute bottom-0 h-auto rounded-lg' src={assets.header_img} alt="" />
 
         </div>
+>>>>>>> d7f28d6b4dff9cf669c0869a5913045c07c6e4ed
       
     </div>
   )
