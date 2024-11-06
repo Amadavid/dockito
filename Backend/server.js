@@ -18,9 +18,13 @@ app.use(cors())
 app.use(express.json())
 
 // api endpoints
+app.use("/api/admin", adminRouter)
+app.use("/api/user", userRouter)
+app.use("/api/doctor", adminRouter)
 
 app.get('/', (req,res)=>{
     res.send('API IS WORKING ')
 })
+
 
 app.listen(port, ()=> console.log("Server Started",port))
