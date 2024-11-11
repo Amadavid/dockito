@@ -14,5 +14,5 @@ const appointmentSchema = new mongoose.Schema({
     iscompleted: { type: Boolean, default: false },  
 })
 
-const appointmentModel = mongoose.models.appointments || mongoose.model('appointment', appointmentSchema)
-export default appointmentModel
+const appointmentModel = mongoose.models.appointments || mongoose.model('appointment', appointmentSchema);
+export default appointmentModel;
