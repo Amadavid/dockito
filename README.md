@@ -12,36 +12,6 @@ Here is a screenshot of the application:
 
 ![App Screenshot](assets/screenshot.png)
 
-## Setup Guide
-
-
-
-Tech Stack
-Frontend
-React: A JavaScript library for building user interfaces.
-Vite: A build tool that provides a faster and leaner development experience for modern web projects.
-Tailwind CSS: A utility-first CSS framework for rapid UI development.
-Axios: A promise-based HTTP client for the browser and Node.js.
-React Router: A collection of navigational components that compose declaratively with your application.
-React Toastify: A library for adding notifications to your app.
-Backend
-Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine.
-Express: A minimal and flexible Node.js web application framework.
-MongoDB: A document-oriented NoSQL database used for high volume data storage.
-Mongoose: An Object Data Modeling (ODM) library for MongoDB and Node.js.
-JWT: A compact, URL-safe means of representing claims to be transferred between two parties.
-Bcrypt: A library to help you hash passwords.
-Cloudinary: A cloud-based service that provides an end-to-end image and video management solution.
-Stripe: A suite of APIs powering online payment processing and commerce solutions for internet businesses.
-Admin Panel
-React: A JavaScript library for building user interfaces.
-Vite: A build tool that provides a faster and leaner development experience for modern web projects.
-Tailwind CSS: A utility-first CSS framework for rapid UI development.
-Axios: A promise-based HTTP client for the browser and Node.js.
-React Router: A collection of navigational components that compose declaratively with your application.
-React Toastify: A library for adding notifications to your app.
-
-
 
 
 ## PROJECT STRUCTURE
