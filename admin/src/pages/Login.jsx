@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 
 const Login = () => {
 
-  const [state, setState] = useState('Admin')
+  /*const [state, setState] = useState('Admin')
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -26,7 +26,7 @@ const Login = () => {
         setAToken(data.token)
         localStorage.setItem('aToken', data.token)
       } else {
-        toast.error(data.message)
+        toast.error('Login failed')
       }
 
     } else {
@@ -41,7 +41,47 @@ const Login = () => {
 
     }
 
-  }
+  }*/
+    const [state, setState] = useState('Admin')
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+  
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    console.log('Backend URL:', backendUrl);
+  
+    const { setDToken } = useContext(DoctorContext)
+    const { setAToken } = useContext(AdminContext)
+  
+    const onSubmitHandler = async (event) => {
+      event.preventDefault();
+  
+      try {
+        if (state === 'Admin') {
+          const { data } = await axios.post(backendUrl + '/api/admin/login', { email, password });
+          if (data.success) {
+            setAToken(data.token)
+            localStorage.setItem('aToken', data.token)
+          } else {
+            toast.error('Login failed')
+          }
+        } else {
+          const { data } = await axios.post(backendUrl + '/api/doctor/login', { email, password });
+          if (data.success) {
+            setDToken(data.token)
+            localStorage.setItem('dToken', data.token)
+          } else {
+            toast.error(data.message)
+          }
+        }
+      } catch (error) {
+        if (error.response) {
+          toast.error(`Error: ${error.response.status} - ${error.response.statusText}`)
+        } else {
+          toast.error('An error occurred during login')
+        }
+      }
+    }
 
   return (
     <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex items-center'>
