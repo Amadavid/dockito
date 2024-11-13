@@ -231,6 +231,17 @@ const listAppointment = async (req, res) => {
     }
 }
 
+export const getUserAppointments = async (req, res) => {
+    try {
+      // Fetch user appointments from the database
+      const appointments = await userModel.find({ userId: req.user.id }); // Adjust this query as needed
+      res.json(appointments);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ success: false, message: error.message });
+    }
+  };
+
 
 // API to make payment of appointment using Stripe
 const paymentStripe = async (req, res) => {
