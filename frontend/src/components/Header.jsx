@@ -1,15 +1,9 @@
 import React from 'react'
-<<<<<<< HEAD
-
-const Header = () => {
-  return (
-    <div>
-=======
 import { assets } from '../assets/assets'
 
 const Header = () => {
   return (
-    <div className='flex flex-col md:flex-row flex-wrap bg-primary rounded-lg px-6 md:px-10 1g:px-20'>
+    <div className='flex flex-col md:flex-row flex-wrap bg-primary rounded-lg px-6 md:px-10 lg:px-20'>
         {/* -------leftside -------*/}
         <div className='md:w-1/2 flex flex-col items-start justify-center  gap-4 py-10 m-auto md:py-[10vw] md:mb-[-30px'>
             <p className='text-3x1 md:text-4xl lg:text-5x1 text-white font-semibold leading-tight md:leading-tight lg:leading-tight'>
@@ -29,7 +23,6 @@ const Header = () => {
             <img className='w-full md:absolute bottom-0 h-auto rounded-lg' src={assets.header_img} alt="" />
 
         </div>
->>>>>>> d7f28d6b4dff9cf669c0869a5913045c07c6e4ed
       
     </div>
   )

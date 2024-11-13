@@ -5,7 +5,7 @@ import Doctors from './pages/Doctors'
 import Login from './pages/Login'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import MyAppiontments from './pages/MyAppiontments'
+import MyAppointments from './pages/MyAppointments'
 import MyProfile from './pages/MyProfile'
 import Appointments from './pages/Appointment'
 import Navbar from './components/Navbar'
@@ -26,7 +26,7 @@ const App = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/about' element={<About />} />
       <Route path='/contact' element={<Contact />} />
-      <Route path='/my-appiontments' element={<MyAppiontments />} />
+      <Route path='/my-appointments' element={<MyAppointments />} />
       <Route path='/My-Profile' element={<MyProfile />} />
       <Route path='/appointment/:docId' element={<Appointments />} />
 

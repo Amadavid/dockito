@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../context/AppContext'
 import { useNavigate, useParams } from 'react-router-dom'
 
-
 const Doctors = () => {
 
-  const { speciality } = useParams()    // get the speciality from the URL
-  
-  
-  const [filterDoc, setFilterDoc] = useState([])    // filter the doctors based on the speciality
-  const [showFilter, setShowFilter] = useState(false)    // show the filter doctors
-  const navigate = useNavigate();        // navigate to another page
+  const { speciality } = useParams()
 
-  const { doctors } = useContext(AppContext)    // get the doctors from the context
+  const [filterDoc, setFilterDoc] = useState([])
+  const [showFilter, setShowFilter] = useState(false)
+  const navigate = useNavigate();
+
+  const { doctors } = useContext(AppContext)
 
   const applyFilter = () => {
     if (speciality) {
@@ -24,9 +22,8 @@ const Doctors = () => {
 
   useEffect(() => {
     applyFilter()
-  }, [speciality, doctors])
+  }, [doctors, speciality])
 
-  
   return (
     <div>
       <p className='text-gray-600'>Browse through the doctors specialist.</p>
@@ -55,11 +52,8 @@ const Doctors = () => {
           ))}
         </div>
       </div>
-      
     </div>
   )
 }
 
 export default Doctors
-
-
