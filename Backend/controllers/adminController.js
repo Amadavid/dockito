@@ -10,7 +10,8 @@ import userModel from "../models/userModel.js";
 const loginAdmin = async (req, res) => {
   try {
 
-      const { email, password } = req.body
+      const { email, password } = req.body;
+      console.log(`Received login request with email: ${email} and password: ${password}`);
 
       if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
           const token = jwt.sign(email + password, process.env.JWT_SECRET)
